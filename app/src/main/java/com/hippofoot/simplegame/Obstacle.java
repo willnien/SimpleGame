@@ -24,7 +24,7 @@ public class Obstacle implements GameObject {
     public Obstacle(int rectHeight, int color, int startX, int startY, int playerGap) {
         this.color = color;
 
-        this.rectangle = new Rect (0, startY, startX, startY + rectHeight);
+        rectangle = new Rect (0, startY, startX, startY + rectHeight);
         rectangle2 = new Rect(startX + playerGap, startY, Constants.SCREEN_WIDTH, startY + rectHeight);
     }
 
@@ -44,6 +44,7 @@ public class Obstacle implements GameObject {
         Paint paint = new Paint();
         paint.setColor(color);
         canvas.drawRect(rectangle, paint);
+        canvas.drawRect(rectangle2, paint);
     }
 
     @Override

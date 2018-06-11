@@ -62,7 +62,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_MOVE:
-                System.out.println("!!!!! x = " + event.getX() + " , y = " + event.getY());
+                //System.out.println("!!!!! x = " + event.getX() + " , y = " + event.getY());
                 playerPoint.set((int)event.getX(), (int)event.getY());
         }
 
@@ -73,6 +73,8 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback {
     public void update() {
         player.update(playerPoint);
         obstacleManager.update();
+
+
     }
 
     @Override
